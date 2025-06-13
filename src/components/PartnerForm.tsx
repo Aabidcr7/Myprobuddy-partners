@@ -1,9 +1,7 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@/components/ui/select";
 import { Mail, User, Phone, Building, Globe, MapPin, MessageSquare, Award } from "lucide-react";
 
 const PartnerForm = () => {
@@ -24,7 +22,11 @@ const PartnerForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -153,23 +155,22 @@ const PartnerForm = () => {
 
                 <div className="relative">
                   <Award className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
-                  <Select
+                  <select
                     name="partnerType"
-                    onValueChange={handlePartnerTypeChange}
                     value={formData.partnerType}
+                    onChange={handleChange}
                     required
+                    className="pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:border-[#5d248f] w-full text-sm text-gray-700 font-inter"
                   >
-                    <SelectTrigger className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f] w-full rounded-xl">
-                      <SelectValue placeholder="Type of Partner" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Affiliate">Affiliate</SelectItem>
-                      <SelectItem value="Incubator">Incubator</SelectItem>
-                      <SelectItem value="Accelerator">Accelerator</SelectItem>
-                      <SelectItem value="Founder Community">Founder Community</SelectItem>
-                      <SelectItem value="Venture Studio">Venture Studio</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <option value="" disabled>
+                      Type of Partner
+                    </option>
+                    <option value="Affiliate">Affiliate</option>
+                    <option value="Incubator">Incubator</option>
+                    <option value="Accelerator">Accelerator</option>
+                    <option value="Founder Community">Founder Community</option>
+                    <option value="Venture Studio">Venture Studio</option>
+                  </select>
                 </div>
 
                 <div className="relative">

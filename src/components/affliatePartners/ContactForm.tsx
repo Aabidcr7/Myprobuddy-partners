@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, User, Phone, Building, Globe, ArrowRight } from "lucide-react";
 
 const ContactForm = () => {
@@ -20,7 +19,11 @@ const ContactForm = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -72,7 +75,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact-us" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="partner-form" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
@@ -140,21 +143,21 @@ const ContactForm = () => {
                 
                 <div className="relative">
                   <Building className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 z-10" />
-                  <Select 
+                  <select
                     name="programType"
                     value={formData.programType}
-                    onValueChange={(value) => handleSelectChange("programType", value)}
+                    onChange={handleChange}
+                    required
+                    className="pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:border-purple-500 w-full text-sm text-gray-700 font-inter"
                   >
-                    <SelectTrigger className="pl-10 bg-gray-50 border-gray-200 focus:border-purple-500">
-                      <SelectValue placeholder="Type of Program" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="incubator">Incubator</SelectItem>
-                      <SelectItem value="accelerator">Accelerator</SelectItem>
-                      <SelectItem value="venture-studio">Venture Studio</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <option value="" disabled>
+                      Type of Program
+                    </option>
+                    <option value="incubator">Incubator</option>
+                    <option value="accelerator">Accelerator</option>
+                    <option value="venture-studio">Venture Studio</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 
                 <div className="relative">

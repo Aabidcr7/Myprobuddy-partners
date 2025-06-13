@@ -16,13 +16,18 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        
-        <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-poppins text-xl">
+        <span
+          className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-poppins text-xl cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           MyProBuddy
         </span>
 
@@ -31,17 +36,17 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink 
+                <NavigationMenuLink
                   href="/service-partners"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium font-inter transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium font-inter text-gray-700 transition-colors hover:text-[#3b1769] focus:text-[#3b1769] focus:bg-accent focus:outline-none"
                 >
                   Service Partners
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink 
+                <NavigationMenuLink
                   href="/affiliate-partners"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium font-inter transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium font-inter text-gray-700 transition-colors hover:text-[#3b1769] focus:text-[#3b1769] focus:bg-accent focus:outline-none"
                 >
                   Affiliate Partners
                 </NavigationMenuLink>
@@ -50,8 +55,8 @@ const Header = () => {
           </NavigationMenu>
 
           <a href="#partner-form">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-2 border-[#ef3e25] text-[#ef3e25] font-inter font-semibold px-6 hover:bg-[#ef3e25] hover:text-white transition-all duration-300"
             >
               Contact Us
@@ -70,7 +75,10 @@ const Header = () => {
             <DrawerContent>
               <DrawerHeader className="text-left">
                 <DrawerTitle className="flex items-center justify-between">
-                  <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-poppins text-xl">
+                  <span
+                    className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-inter text-xl cursor-pointer"
+                    onClick={() => navigate("/")}
+                  >
                     MyProBuddy
                   </span>
                   <DrawerClose asChild>
@@ -100,7 +108,7 @@ const Header = () => {
                   </DrawerClose>
                   <DrawerClose asChild>
                     <a href="#partner-form" className="block mt-4">
-                      <Button 
+                      <Button
                         className="w-full border-2 border-[#ef3e25] text-[#ef3e25] font-inter font-semibold py-3 hover:bg-[#ef3e25] hover:text-white transition-all duration-300"
                         variant="outline"
                       >

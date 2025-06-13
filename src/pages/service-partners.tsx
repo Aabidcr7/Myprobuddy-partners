@@ -29,6 +29,7 @@ import {
   Building2,
 } from "lucide-react";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const ServicePartnerForm = () => {
   const { toast } = useToast();
@@ -94,7 +95,7 @@ const ServicePartnerForm = () => {
 
   return (
     <section
-      id="apply-service-partner"
+      id="partner-form"
       className="py-20 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="container mx-auto px-4">
@@ -278,60 +279,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className="bg-white shadow-sm border-b font-poppins">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <img
-                src="https://debt.myprobuddy.com/lovable-uploads/7b22b45a-6860-47dd-b4d2-6f0dcf222efa.png"
-                alt="MyProBuddy Logo"
-                className="w-10 h-10 object-contain mr-3"
-              />
-              <span className="text-xl font-bold text-gray-900 font-poppins">
-                MyProBuddy
-              </span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8 font-inter">
-              <button
-                onClick={() => scrollToSection("who-can-join")}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"
-              >
-                Who Can Join
-              </button>
-              <button
-                onClick={() => scrollToSection("why-partner")}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"
-              >
-                Why Partner
-              </button>
-              <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"
-              >
-                How It Works
-              </button>
-              <button
-                onClick={() => scrollToSection("benefits")}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"
-              >
-                Benefits
-              </button>
-              <button
-                onClick={() => scrollToSection("success-stories")}
-                className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"
-              >
-                Success Stories
-              </button>
-            </div>
-            <button
-              onClick={() => scrollToSection("apply-service-partner")}
-              className="bg-[#ef3e25] text-white px-6 py-2 rounded-lg font-bold hover:bg-[#d53720] transition-colors font-poppins"
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Header />
+      <div className="hidden md:block" style={{ height: '80px' }}></div>
 
       {/* Hero Section */}
       <section className="pt-20 md:pt-32 pb-32 bg-gradient-to-b from-gray-50 to-white">
