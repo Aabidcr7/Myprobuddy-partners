@@ -84,7 +84,7 @@ const Header = () => {
                 <nav className="flex flex-col space-y-4">
                   <DrawerClose asChild>
                     <a 
-                      href="#service-partners"
+                      href="/service-partners"
                       className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#5d248f] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Service Partners
@@ -92,7 +92,7 @@ const Header = () => {
                   </DrawerClose>
                   <DrawerClose asChild>
                     <a 
-                      href="#affiliate-partners"
+                      href="/affiliate-partners"
                       className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#5d248f] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Affiliate Partners
