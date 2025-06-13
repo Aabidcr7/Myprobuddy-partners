@@ -54,6 +54,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Explore More</h3>
             <ul className="space-y-3 text-gray-300">
               <li><a href="https://investor.myprobuddy.com/" className="hover:text-white">Investor</a></li>
+               <li><a href="https://partners.myprobuddy.com/" className="hover:text-white">Partners</a></li>
               <li><a href="https://portfolio.myprobuddy.com/" className="hover:text-white">Portfolio</a></li>
               <li><a href="https://grants.myprobuddy.com/chatbot" className="hover:text-white">Grants AI Agent</a></li>
             </ul>
