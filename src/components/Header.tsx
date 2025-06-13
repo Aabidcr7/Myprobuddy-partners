@@ -83,17 +83,17 @@ const Header = () => {
               <div className="px-4 pb-8">
                 <nav className="flex flex-col space-y-4">
                   <DrawerClose asChild>
-                    <a 
+                    <a
                       href="/service-partners"
-                      className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#5d248f] hover:bg-gray-50 rounded-md transition-colors"
+                      className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#3b1769] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Service Partners
                     </a>
                   </DrawerClose>
                   <DrawerClose asChild>
-                    <a 
+                    <a
                       href="/affiliate-partners"
-                      className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#5d248f] hover:bg-gray-50 rounded-md transition-colors"
+                      className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#3b1769] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Affiliate Partners
                     </a>

@@ -291,7 +291,7 @@ const Index = () => {
                 MyProBuddy
               </span>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-8 font-inter">
               <button
                 onClick={() => scrollToSection("who-can-join")}
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors font-poppins"

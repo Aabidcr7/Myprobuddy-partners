@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Youtube, Linkedin, Instagram } from 'lucide-react';
 
@@ -42,7 +41,7 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-gray-300 font-inter">
               <li><a href="https://debt.myprobuddy.com/" className="hover:text-white">Debt Funding</a></li>
               <li><a href="https://grants.myprobuddy.com/" className="hover:text-white">Grants</a></li>
               <li><a href="https://equity.myprobuddy.com/" className="hover:text-white">Equity Funding</a></li>
@@ -52,7 +51,7 @@ const Footer = () => {
           {/* Explore More */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Explore More</h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-gray-300 font-inter">
               <li><a href="https://investor.myprobuddy.com/" className="hover:text-white">Investor</a></li>
               <li><a href="https://partners.myprobuddy.com/" className="hover:text-white">Partners</a></li>
               <li><a href="https://portfolio.myprobuddy.com/" className="hover:text-white">Portfolio</a></li>
@@ -63,7 +62,7 @@ const Footer = () => {
           {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-gray-300 font-inter">
               <li><a href="https://www.myprobuddy.com/" className="hover:text-white">Home</a></li>
               <li><a href="https://www.myprobuddy.com/about-us" className="hover:text-white">About us</a></li>
               <li><a href="https://www.myprobuddy.com/founders-insights" className="hover:text-white">Blogs</a></li>
