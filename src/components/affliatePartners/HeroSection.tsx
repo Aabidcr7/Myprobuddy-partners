@@ -6,9 +6,10 @@ const HeroSection = () => {
     <section className="pt-8 pb-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
             Your Portfolio Deserves the{" "}
-            <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
+            <span className="text-gradient">
               Best Fundraising Support
             </span>
           </h1>

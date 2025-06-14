@@ -77,8 +77,9 @@ const PartnerForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-                       <h2 className="font-poppins font-bold text-3xl md:text-4xl">
-  Join Our <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">Partner Network</span>
+                       <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+  Join Our <span className="text-gradient">Partner Network</span>
 </h2>
 
             <p className="mt-3 text-gray-600">Fill the form below to apply as a partner with us</p>

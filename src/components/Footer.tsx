@@ -25,17 +25,33 @@ const Footer = () => {
             </h3>
 
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-8">
-              <a href="https://youtube.com/@myprobuddy?si=VKVR7TbVAB8Hc0uK" className="w-8 h-8 bg-white text-black rounded flex items-center justify-center hover:bg-gray-200 transition-colors" target="_blank" rel="noopener noreferrer">
-                <Youtube size={16} />
-              </a>
-              <a href="https://www.linkedin.com/company/myprobuddy/" className="w-8 h-8 bg-white text-black rounded flex items-center justify-center hover:bg-gray-200 transition-colors" target="_blank" rel="noopener noreferrer">
-                <Linkedin size={16} />
-              </a>
-              <a href="https://www.instagram.com/myprobuddy/" className="w-8 h-8 bg-white text-black rounded flex items-center justify-center hover:bg-gray-200 transition-colors" target="_blank" rel="noopener noreferrer">
-                <Instagram size={16} />
-              </a>
-            </div>
+        <div className="flex space-x-4 mt-8">
+  <a
+    href="https://youtube.com/@myprobuddy?si=VKVR7TbVAB8Hc0uK"
+    className="hover:opacity-80 transition-opacity"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Youtube size={20} color="#FF0000" />
+  </a>
+  <a
+    href="https://www.linkedin.com/company/myprobuddy/"
+    className="hover:opacity-80 transition-opacity"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Linkedin size={20} color="#0077B5" />
+  </a>
+  <a
+    href="https://www.instagram.com/myprobuddy/"
+    className="hover:opacity-80 transition-opacity"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Instagram size={20} color="#E1306C" />
+  </a>
+</div>
+
           </div>
 
           {/* Services */}

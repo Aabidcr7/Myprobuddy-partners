@@ -4,8 +4,9 @@ const WhyUsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 id="why-us" className="text-4xl font-bold mb-4">
-              Why <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">Incubators Love Us</span>
+            <h2 id="why-us"  className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+              Why <span className="text-gradient">Incubators Love Us</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We understand the unique challenges of managing multiple portfolio companies and their diverse fundraising needs. Our specialized approach delivers consistent results.

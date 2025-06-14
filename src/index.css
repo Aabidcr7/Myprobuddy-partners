@@ -116,12 +116,10 @@
     background: linear-gradient(135deg, #ffe0db 0%, #5f248e 100%);
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, #5f248e 0%, #ef3e25 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+ .text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FC5109] to-[#FC5109];
+}
+
 
   .glass-effect {
     backdrop-filter: blur(10px);

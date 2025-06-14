@@ -10,8 +10,9 @@ const PartnerProgram = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl">
-  Explore <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">Partner Program</span>
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+  Explore <span className="text-gradient">Partner Program</span>
 </h2>
           </div>
           <p className="font-inter text-xl text-gray-700 max-w-4xl mx-auto mb-4">

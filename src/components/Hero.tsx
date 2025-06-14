@@ -8,8 +8,9 @@ const Hero = () => {
       <div className="container mx-auto text-center">
         <div className="animate-fade-in-up max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <h1 className="font-poppins font-bold text-5xl md:text-7xl bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent leading-tight">
-              Partner Program
+            <h1 className="text-4xl md:text-6xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+              Partner <span className="text-gradient"> Program</span> 
             </h1>
           </div>
           

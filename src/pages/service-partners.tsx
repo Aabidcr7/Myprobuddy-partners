@@ -94,176 +94,170 @@ const ServicePartnerForm = () => {
   };
 
   return (
-    <section
-      id="partner-form"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
-    >
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Apply as a{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
-                Service Partner
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 font-inter">
-              Let's bring expert-led support to high-potential startups
-            </p>
-          </div>
+   <section id="partner-form" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto">
+      <div className="text-center mb-10">
+        <h2
+          className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+          style={{ letterSpacing: '-2px' }}
+        >
+          Apply as a{" "}
+          <span className="text-gradient">
+            Service Partner
+          </span>
+        </h2>
+        <p className="text-lg text-gray-600 font-inter">
+          Let's bring expert-led support to high-potential startups
+        </p>
+      </div>
 
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] h-2"></div>
-            <div className="p-8">
-              <form
-                name="service-partner-form"
-                onSubmit={handleSubmit}
-                className="space-y-5"
-              >
-                {/* Full Name */}
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="text"
-                    name="name"
-                    placeholder="Full Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
+      <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] h-2"></div>
+        <div className="p-8">
+          <form name="service-partner-form" onSubmit={handleSubmit} className="space-y-5">
 
-                {/* Company Name */}
-                <div className="relative">
-                  <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="text"
-                    name="company"
-                    placeholder="Company Name"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* Email */}
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* LinkedIn */}
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="url"
-                    name="linkedin"
-                    placeholder="LinkedIn Profile"
-                    value={formData.linkedin}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* Category */}
-                <div className="relative">
-                  <Settings className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <select
-                    name="category"
-                    value={formData.category}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:border-[#5d248f] w-full text-sm text-gray-700"
-                  >
-                    <option value="" disabled>
-                      Select Service Category
-                    </option>
-                    <option value="Legal">Legal</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Design">Design</option>
-                    <option value="Compliance">Compliance</option>
-                    <option value="Tech Audit">Tech Audit</option>
-                    <option value="Others">Others</option>
-                  </select>
-                </div>
-
-                {/* Portfolio */}
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="url"
-                    name="portfolio"
-                    placeholder="Website / Portfolio Link"
-                    value={formData.portfolio}
-                    onChange={handleChange}
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* Experience */}
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
-                  <Input
-                    type="number"
-                    name="experience"
-                    placeholder="Years of Experience"
-                    value={formData.experience}
-                    onChange={handleChange}
-                    required
-                    className="pl-10 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* Bio */}
-                <div className="relative">
-                  <Textarea
-                    name="bio"
-                    placeholder="Short Bio or Company Description"
-                    value={formData.bio}
-                    onChange={handleChange}
-                    rows={4}
-                    required
-                    className="bg-gray-50 border-gray-200 focus:border-[#5d248f]"
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <div className="pt-3">
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-6 bg-[#ef3e25] hover:bg-[#d53720] text-white font-bold rounded-lg transition-all duration-200 flex items-center justify-center gap-2 text-base"
-                  >
-                    {isSubmitting
-                      ? "Submitting..."
-                      : "Apply as Service Partner"}
-                    {!isSubmitting && <ArrowRight className="h-5 w-5" />}
-                  </Button>
-                </div>
-              </form>
+            {/* Full Name */}
+            <div className="relative">
+              <User className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
             </div>
-          </div>
 
-          <div className="mt-6 text-center text-sm text-gray-500">
-            <p className="font-inter">
-              Your details will remain confidential and are used only for
-              partnership consideration.
-            </p>
-          </div>
+            {/* Company Name */}
+            <div className="relative">
+              <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="text"
+                name="company"
+                placeholder="Company Name"
+                value={formData.company}
+                onChange={handleChange}
+                required
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="relative">
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
+            </div>
+
+            {/* LinkedIn */}
+            <div className="relative">
+              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="url"
+                name="linkedin"
+                placeholder="LinkedIn Profile"
+                value={formData.linkedin}
+                onChange={handleChange}
+                required
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
+            </div>
+
+            {/* Category */}
+            <div className="relative">
+              <Settings className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <select
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+                required
+                className="pl-12 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:border-[#5d248f] w-full text-sm text-gray-700"
+              >
+                <option value="" disabled>Select Service Category</option>
+                <option value="Legal">Legal</option>
+                <option value="Finance">Finance</option>
+                <option value="Design">Design</option>
+                <option value="Compliance">Compliance</option>
+                <option value="Tech Audit">Tech Audit</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            {/* Portfolio */}
+            <div className="relative">
+              <Globe className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="url"
+                name="portfolio"
+                placeholder="Website / Portfolio Link"
+                value={formData.portfolio}
+                onChange={handleChange}
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
+            </div>
+
+            {/* Experience */}
+            <div className="relative">
+              <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5d248f] h-5 w-5" />
+              <Input
+                type="number"
+                name="experience"
+                placeholder="Years of Experience"
+                value={formData.experience}
+                onChange={handleChange}
+                required
+                className="pl-12 bg-gray-50 border-gray-200 focus:border-[#5d248f]"
+              />
+            </div>
+
+            {/* Bio */}
+            <div className="relative">
+              <Textarea
+                name="bio"
+                placeholder="Short Bio or Company Description"
+                value={formData.bio}
+                onChange={handleChange}
+                rows={4}
+                required
+                className="bg-gray-50 border-gray-200 focus:border-[#5d248f] pl-4"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div className="pt-3">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-6 bg-[#ef3e25] hover:bg-[#d53720] text-white font-bold rounded-lg transition-all duration-200 flex items-center justify-center gap-2 text-base"
+              >
+                {isSubmitting ? "Submitting..." : "Apply as Service Partner"}
+                {!isSubmitting && <ArrowRight className="h-5 w-5" />}
+              </Button>
+            </div>
+
+          </form>
         </div>
       </div>
-    </section>
+
+      <div className="mt-6 text-center text-sm text-gray-500">
+        <p className="font-inter">
+          Your details will remain confidential and are used only for partnership consideration.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 };
 
@@ -286,18 +280,23 @@ const Index = () => {
       <section className="pt-20 md:pt-32 pb-32 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Let's Build the{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
-                Startup Backbone
-              </span>
-              , Together.
-            </h1>
+          <h1
+  className="text-4xl md:text-6xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}
+>
+  Let's Build the{" "}
+  <span className="text-gradient">
+    Startup Backbone
+  </span>
+  , Together.
+</h1>
+
+
             <p className="text-xl text-gray-600 mb-8 font-inter max-w-2xl mx-auto">
               Join MyProBuddy as a Service Partner and support founders in their
               journey while building your business with revenue streams.
             </p>
-            <a href="#apply-service-partner">
+            <a href="#partner-form">
               <Button className="bg-[#ef3e25] hover:bg-[#d53720] text-white px-8 py-4 text-lg font-bold rounded-lg transition-all duration-200 inline-flex items-center gap-2">
                 Apply as Service Partner
                 <ArrowRight className="h-5 w-5" />
@@ -340,13 +339,17 @@ const Index = () => {
       <section id="who-can-join" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Who Can Join as a{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
-                Service Partner
-              </span>
-              ?
-            </h2>
+             <h2
+  className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}
+>
+   Who Can Join as a{" "}
+  <span className="text-gradient">
+    Service Partner 
+  </span>
+  ?
+</h2>
+          
             <p className="text-lg text-gray-600 font-inter max-w-3xl mx-auto">
               Partner with us to empower startups. We bring together experts and
               firms big and small who are passionate about driving startup
@@ -354,7 +357,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mb-6">
                 <Scale className="h-8 w-8 text-[#5d248f]" />
@@ -457,6 +460,7 @@ const Index = () => {
               </ul>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -464,9 +468,9 @@ const Index = () => {
       <section id="why-partner" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]" style={{ letterSpacing: '-2px' }}>
               Why{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
+              <span className="text-gradient">
                 Partner
               </span>{" "}
               with Us?
@@ -543,9 +547,9 @@ const Index = () => {
       <section id="how-it-works" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]" style={{ letterSpacing: '-2px' }} >
               How It{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
+              <span className="text-gradient">
                 Works
               </span>
             </h2>
@@ -644,9 +648,9 @@ const Index = () => {
       <section id="benefits" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]" style={{ letterSpacing: '-2px' }}>
               What You Gain as a{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
+              <span className="text-gradient">
                 Partner
               </span>
             </h2>
@@ -730,9 +734,9 @@ const Index = () => {
       <section id="success-stories" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]" style={{ letterSpacing: '-2px' }}>
               What Our Partners{" "}
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">
+              <span className="text-gradient">
                 Achieve
               </span>
             </h2>

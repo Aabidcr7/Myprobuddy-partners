@@ -4,8 +4,9 @@ const SupportSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">End-to-End Support</span> for Your Cohorts
+            <h2   className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+              <span className="text-gradient">End-to-End Support</span> for Your Cohorts
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               From initial strategy to successful funding closure, our comprehensive approach ensures your portfolio companies receive expert guidance at every step of their fundraising journey.

@@ -79,8 +79,9 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-zinc-950">
-              Apply to <span className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent">Partner with Us</span>
+            <h2 className="mt-10 text-3xl md:text-5xl font-poppins font-semibold mb-6 animate-fade-in text-[#61238B]"
+  style={{ letterSpacing: '-2px' }}>
+              Apply to <span className="text-gradient">Partner with Us</span>
             </h2>
             <p className="mt-3 text-gray-600">Let's unlock efficient capital access for your cohort</p>
           </div>
