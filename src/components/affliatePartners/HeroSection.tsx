@@ -22,7 +22,7 @@ const HeroSection = () => {
             size="lg" 
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('partner-form')?.scrollIntoView({ behavior: 'smooth' });
             }}
             className="bg-[#ef3e25] hover:bg-[#d53720] text-white font-medium px-8 py-6 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
           >
