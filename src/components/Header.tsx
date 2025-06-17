@@ -18,6 +18,11 @@ import {
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+function scrollToTopAndNavigate(navigate: any, path: string) {
+  window.scrollTo(0, 0);
+  navigate(path);
+}
+
 const Header = () => {
   const navigate = useNavigate();
 
@@ -26,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <span
           className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-poppins text-xl cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => scrollToTopAndNavigate(navigate, "/")}
         >
           MyProBuddy
         </span>
@@ -38,6 +43,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="/service-partners"
+                  onClick={(e: React.MouseEvent) => { e.preventDefault(); scrollToTopAndNavigate(navigate, "/service-partners"); }}
                   className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium font-inter text-gray-700 transition-colors hover:text-[#3b1769] focus:text-[#3b1769] focus:bg-accent focus:outline-none"
                 >
                   Service Partners
@@ -46,6 +52,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="/affiliate-partners"
+                  onClick={(e: React.MouseEvent) => { e.preventDefault(); scrollToTopAndNavigate(navigate, "/affiliate-partners"); }}
                   className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium font-inter text-gray-700 transition-colors hover:text-[#3b1769] focus:text-[#3b1769] focus:bg-accent focus:outline-none"
                 >
                   Affiliate Partners
@@ -77,7 +84,7 @@ const Header = () => {
                 <DrawerTitle className="flex items-center justify-between">
                   <span
                     className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-inter text-xl cursor-pointer"
-                    onClick={() => navigate("/")}
+                    onClick={() => scrollToTopAndNavigate(navigate, "/")}
                   >
                     MyProBuddy
                   </span>
@@ -93,6 +100,7 @@ const Header = () => {
                   <DrawerClose asChild>
                     <a
                       href="/service-partners"
+                      onClick={e => { e.preventDefault(); scrollToTopAndNavigate(navigate, "/service-partners"); }}
                       className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#3b1769] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Service Partners
@@ -101,6 +109,7 @@ const Header = () => {
                   <DrawerClose asChild>
                     <a
                       href="/affiliate-partners"
+                      onClick={e => { e.preventDefault(); scrollToTopAndNavigate(navigate, "/affiliate-partners"); }}
                       className="block py-3 px-4 text-lg font-medium font-inter text-gray-700 hover:text-[#3b1769] hover:bg-gray-50 rounded-md transition-colors"
                     >
                       Affiliate Partners
