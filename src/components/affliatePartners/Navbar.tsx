@@ -29,12 +29,25 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <span
-          className="bg-gradient-to-r from-[#5d248f] to-[#f46d19] bg-clip-text text-transparent font-bold font-poppins text-xl cursor-pointer"
-          onClick={() => scrollToTopAndNavigate(navigate, "/")}
-        >
-          MyProBuddy
-        </span>
+       <button
+              className="flex items-center text-2xl font-extrabold cursor-pointer"
+              onClick={() => scrollToTopAndNavigate(navigate, "/")}
+            >
+              <img
+                src="/logo.png"
+                alt="MyProBuddy Logo"
+                className="h-10 w-10 mr-2"
+              />
+              <span
+                style={{
+                  color: "#0a0c17",
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 600, // Reduced font weight for less bold appearance
+                }}
+              >
+                MyProBuddy
+              </span>
+            </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
