@@ -71,7 +71,7 @@ const Footer = () => {
               <li><a href="https://investor.myprobuddy.com/" className="hover:text-white">Investor</a></li>
               <li><a href="https://partners.myprobuddy.com/" className="hover:text-white">Partners</a></li>
               <li><a href="https://portfolio.myprobuddy.com/" className="hover:text-white">Portfolio</a></li>
-              <li><a href="https://grants.myprobuddy.com/chatbot" className="hover:text-white">Grants AI Agent</a></li>
+              <li><a href="https://grantsbot.myprobuddy.com/" className="hover:text-white">Grants AI Agent</a></li>
             </ul>
           </div>
 
