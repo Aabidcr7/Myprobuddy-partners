@@ -86,6 +86,11 @@ const Footer = () => {
               <li><a href="https://www.myprobuddy.com/contact-us" className="hover:text-white">Contact</a></li>
               <li><a href="https://www.myprobuddy.com/privacy-policy" className="hover:text-white">Privacy Policy</a></li>
               <li><a href="https://www.myprobuddy.com/terms-and-conditions" className="hover:text-white">Terms & Conditions</a></li>
+                <li>
+                <a href="https://www.myprobuddy.com/cookie-policy" className="text-gray-300 hover:text-white transition-colors">
+                  Cookie Policy
+                </a>
+              </li>
             </ul>
           </div>
         </div>
